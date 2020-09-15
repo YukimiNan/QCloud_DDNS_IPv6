@@ -21,6 +21,7 @@ A Python script to sync local IPv6 address to QCloud Domain Resolution Service, 
 ### 1
 
 在腾讯云申请你的API密钥（SECRETID和SECRETKEY）
+
 Apply for your API keys (SECRETID and SECRETKEY) on QCloud
 
 https://console.cloud.tencent.com/cam/capi
@@ -34,9 +35,11 @@ Modify every line commented with "CHANGEME" in main.py(CTRL+F)
 ### 3
 
 将脚本加入计划任务，每隔1~5分钟执行一次
+
 Add the script to the scheduled task and execute it every 1 to 5 minutes
 
 Windows：在开始菜单中搜索“任务计划程序”
+
 Windows：search "task" in start menu
 
 Linux：crontab
