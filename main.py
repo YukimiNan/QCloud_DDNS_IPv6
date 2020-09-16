@@ -22,9 +22,10 @@ logger = setLogger(dir_=os.path.join(MAIN_DIR, 'log'))
 
 def get_host_ipv6():
     with socket.socket(socket.AF_INET6, socket.SOCK_DGRAM) as s:
-        # Any most accessible IPv6 address. This default is aliyun's DNS server.
-        # CHANGEME to an international accessible IP such as Google, if you're outside China.
-        s.connect(('2400:3200::1', 53))
+        # Request Google to get available local IP.
+        # This works in China mainland as well, we don't need to really reach Google.
+        # Compared with pinging some DNSv6 server, pinging 80 port works better in the situation using proxy or VPN or tunnel.
+        s.connect(('www.google.com', 80))
         return s.getsockname()[0]
 
 
